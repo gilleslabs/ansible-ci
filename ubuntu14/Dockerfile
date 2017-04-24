@@ -3,6 +3,9 @@ FROM ubuntu:14.04
 MAINTAINER Gilles Tosi
 RUN apt-get update -y && \
 apt-get install -y openssh-server && \
+apt-get install -y python-apt && \
+apt-get install -y python2.7 python-simplejson && \
+apt-get install sshpass -y && \
 apt-get clean
 RUN mkdir /var/run/sshd
 
